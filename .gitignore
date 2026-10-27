@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# Raw data is re-downloaded by src/download_data.py (dataset terms not independently confirmed)
+data/raw/*.csv
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Power BI temp/cache files (the .pbix itself is kept)
+*.pbi.tmp
+
+# SQLite database files (can be re-created with `python -m src.run_sql --db churn.db`)
+*.db

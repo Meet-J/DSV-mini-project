@@ -1,0 +1,77 @@
+{
+  "selected_model": "Random Forest",
+  "best_params": {
+    "min_samples_leaf": 10,
+    "max_features": 0.5,
+    "max_depth": 6
+  },
+  "operating_threshold": 0.33,
+  "threshold_rule": "maximises F1 on out-of-fold training predictions; a convention, not a business-optimal value",
+  "selection_rule": "one-standard-error rule on CV ROC-AUC, simplest model first",
+  "random_seed": 42,
+  "cv_folds": 5,
+  "test_size": 0.2,
+  "n_train": 5634,
+  "n_test": 1409,
+  "scikit_learn_version": "1.8.0",
+  "model_input_columns": [
+    "tenure",
+    "SeniorCitizen",
+    "Partner_Yes",
+    "Dependents_Yes",
+    "PhoneService_Yes",
+    "MultipleLines_Yes",
+    "InternetService_DSL",
+    "InternetService_Fiber optic",
+    "InternetService_No",
+    "OnlineSecurity_Yes",
+    "OnlineBackup_Yes",
+    "DeviceProtection_Yes",
+    "TechSupport_Yes",
+    "StreamingTV_Yes",
+    "StreamingMovies_Yes",
+    "Contract_Month-to-month",
+    "Contract_One year",
+    "Contract_Two year",
+    "PaperlessBilling_Yes",
+    "PaymentMethod_Bank transfer (automatic)",
+    "PaymentMethod_Credit card (automatic)",
+    "PaymentMethod_Electronic check",
+    "PaymentMethod_Mailed check"
+  ],
+  "cv_summary": [
+    {
+      "model": "Logistic Regression",
+      "search": "grid",
+      "candidates_tried": 9,
+      "cv_mean": 0.8451485636237959,
+      "cv_std": 0.012065675656228275,
+      "cv_se": 0.0053959341923581604
+    },
+    {
+      "model": "Decision Tree",
+      "search": "grid",
+      "candidates_tried": 24,
+      "cv_mean": 0.8364195465392541,
+      "cv_std": 0.010712023776610308,
+      "cv_se": 0.004790562668218934
+    },
+    {
+      "model": "Random Forest",
+      "search": "random (15 candidates)",
+      "candidates_tried": 15,
+      "cv_mean": 0.8481664523188994,
+      "cv_std": 0.010918842683554473,
+      "cv_se": 0.004883054895210805
+    },
+    {
+      "model": "Gradient Boosting",
+      "search": "random (15 candidates)",
+      "candidates_tried": 15,
+      "cv_mean": 0.850401177493373,
+      "cv_std": 0.011573953494154342,
+      "cv_se": 0.005176029356270064
+    }
+  ],
+  "note": "Pipeline takes the cleaned DataFrame (customerID as index, no Churn column). Load with joblib from the project root so the `src` package is importable."
+}

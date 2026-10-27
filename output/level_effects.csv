@@ -1,0 +1,46 @@
+feature,level,customers,mean_effect
+Contract,Month-to-month,773,12.271076519439527
+Contract,One year,300,-8.353597199607217
+Contract,Two year,336,-13.133668258563432
+Dependents,No,978,0.14081370939267882
+Dependents,Yes,431,-0.3684743337564683
+DeviceProtection,No,623,-0.029306358656777897
+DeviceProtection,No internet service,312,-0.07111720465183813
+DeviceProtection,Yes,474,0.025238438509555015
+InternetService,DSL,484,-6.035644328582951
+InternetService,Fiber optic,613,10.005294246630008
+InternetService,No,312,-11.183600662182535
+MultipleLines,No,705,-0.689295884619967
+MultipleLines,No phone service,123,-0.37191668090655333
+MultipleLines,Yes,581,0.765580993420798
+OnlineBackup,No,646,0.3201494809141349
+OnlineBackup,No internet service,312,0.09836098020164945
+OnlineBackup,Yes,451,-0.42527273704120505
+OnlineSecurity,No,701,0.8192060693199613
+OnlineSecurity,No internet service,312,0.3600578699449287
+OnlineSecurity,Yes,396,-1.8866857479720414
+PaperlessBilling,No,569,-1.4100284400961611
+PaperlessBilling,Yes,840,0.8158558350150829
+Partner,No,736,0.11604823938071705
+Partner,Yes,673,-0.10490722798647036
+PaymentMethod,Bank transfer (automatic),300,-2.361120404153475
+PaymentMethod,Credit card (automatic),309,-2.663871243311239
+PaymentMethod,Electronic check,474,4.515331034310012
+PaymentMethod,Mailed check,326,-2.5680988263842517
+PhoneService,No,123,1.5037299618685007
+PhoneService,Yes,1286,-0.2810994368424347
+SeniorCitizen,No,1187,-0.21856011737536796
+SeniorCitizen,Yes,222,1.2547877827073428
+StreamingMovies,No,568,-1.0229442267956013
+StreamingMovies,No internet service,312,-1.0425987497392395
+StreamingMovies,Yes,529,1.3053187872040284
+StreamingTV,No,584,-0.9288864143810021
+StreamingTV,No internet service,312,-0.6637663645145586
+StreamingTV,Yes,513,1.0694738920581557
+TechSupport,No,702,0.41411942003380237
+TechSupport,No internet service,312,0.18281285565268413
+TechSupport,Yes,395,-0.9192719675572127
+"tenure (by band, months)",0-12,449,10.60100907677903
+"tenure (by band, months)",13-24,206,-2.8007484794771624
+"tenure (by band, months)",25-48,304,-6.612858098576874
+"tenure (by band, months)",49+,450,-7.063211501749075

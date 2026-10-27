@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Churn Prediction – Project Presentation</title>
+  <style>
+    body {font-family: 'Inter', sans-serif; margin: 2rem; line-height: 1.6; color: #333;}
+    h1, h2, h3 {color: #2c3e50;}
+    .section {margin-bottom: 3rem;}
+    .img-grid {display: flex; flex-wrap: wrap; gap: 1rem;}
+    .img-grid img {max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;}
+    .caption {font-size: 0.9rem; color: #555; text-align: center; margin-top: 0.3rem;}
+  </style>
+</head>
+<body>
+  <h1>Customer Churn Prediction – End‑to‑End Data Science Project</h1>
+  <p><strong>Goal:</strong> Identify customers at risk of churn, quantify revenue exposure, and provide actionable insights for a retention team.</p>
+
+  <div class="section" id="overview">
+    <h2>Project Overview</h2>
+    <p>The repository contains the full pipeline: data download → cleaning → feature engineering → model training → interpretation → risk segmentation → Power BI specification.</p>
+  </div>
+
+  <div class="section" id="eda">
+    <h2>Exploratory Data Analysis (EDA)</h2>
+    <div class="img-grid">
+      <div>
+        <img src="images/eda/01_churn_by_contract.png" alt="Churn by contract type">
+        <div class="caption">Figure 1 – Churn rate by contract type</div>
+      </div>
+      <div>
+        <img src="images/eda/02_churn_by_tenure.png" alt="Churn by tenure">
+        <div class="caption">Figure 2 – Churn rate by tenure groups</div>
+      </div>
+      <div>
+        <img src="images/eda/03_contract_by_tenure.png" alt="Contract vs tenure">
+        <div class="caption">Figure 3 – Contract distribution across tenure</div>
+      </div>
+      <div>
+        <img src="images/eda/04_internet_and_addons.png" alt="Internet service & add‑ons">
+        <div class="caption">Figure 4 – Internet service and protective add‑ons vs churn</div>
+      </div>
+      <div>
+        <img src="images/eda/05_charges.png" alt="Charges distribution">
+        <div class="caption">Figure 5 – Monthly & total charges by churn status</div>
+      </div>
+      <div>
+        <img src="images/eda/06_payment_method.png" alt="Payment method">
+        <div class="caption">Figure 6 – Payment method impact on churn</div>
+      </div>
+      <div>
+        <img src="images/eda/07_demographics.png" alt="Demographics">
+        <div class="caption">Figure 7 – Demographic breakdown (gender, senior citizen)</div>
+      </div>
+      <div>
+        <img src="images/eda/08_association_strength.png" alt="Association strength">
+        <div class="caption">Figure 8 – Strength of association for each feature (chi‑square)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="model-performance">
+    <h2>Model Performance</h2>
+    <p>Four models were evaluated; the final model (Random Forest) achieved:</p>
+    <ul>
+      <li>ROC‑AUC: 0.8462</li>
+      <li>Precision (threshold 0.33): 0.543</li>
+      <li>Recall (threshold 0.33): 0.738</li>
+    </ul>
+    <div class="img-grid">
+      <div>
+        <img src="images/model/roc_pr_curves.png" alt="ROC & PR curves">
+        <div class="caption">Figure 9 – ROC and Precision‑Recall curves</div>
+      </div>
+      <div>
+        <img src="images/model/threshold_tradeoff.png" alt="Threshold trade‑off">
+        <div class="caption">Figure 10 – Precision/Recall trade‑off across thresholds</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="risk-segmentation">
+    <h2>Risk Segmentation</h2>
+    <p>Customers are bucketed into Low, Medium, and High risk tiers based on predicted churn probability.</p>
+    <div class="img-grid">
+      <div>
+        <img src="images/customer_risk.png" alt="Risk tier distribution">
+        <div class="caption">Figure 11 – Risk tier distribution and revenue exposure</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="retention-strategy">
+    <h2>Retention Strategy Recommendations</h2>
+    <div class="img-grid">
+      <div>
+        <img src="images/retention_strategy.png" alt="Retention strategy matrix">
+        <div class="caption">Figure 12 – Risk × Value matrix with suggested actions</div>
+      </div>
+    </div>
+    <p>Key hypotheses (to be piloted) are listed in the README under *Business Recommendations*.</p>
+  </div>
+
+  <div class="section" id="dashboard‑mockup">
+    <h2>Dashboard Mock‑up (Power BI placeholders)</h2>
+    <div class="img-grid">
+      <div>
+        <img src="images/overview.png" alt="Executive overview page">
+        <div class="caption">Figure 13 – Executive Overview (KPI cards, churn by contract/tenure)</div>
+      </div>
+      <div>
+        <img src="images/churn_drivers.png" alt="Churn drivers page">
+        <div class="caption">Figure 14 – Churn Drivers visualisation</div>
+      </div>
+    </div>
+    <p>These images are placeholders supplied by the original author. They convey the intended layout and can be shown directly in a slide deck.</p>
+  </div>
+
+  <footer>
+    <p>All images are generated from the code in this repository. The full pipeline can be re‑run with <code>python -m src.download_data && python -m src.preprocessing && python -m src.train_model && python -m src.predict && python -m src.interpretation</code>. The source code and data are available in the <a href="https://github.com/your‑repo/customer‑churn‑prediction‑powerbi">GitHub repository</a>.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# Customer Churn Prediction & Retention Analytics
+# Tested with Python 3.12.3. Each line is a "compatible release" of the version the project was built and tested with
+# (for example ~=3.0 means >=3.0 and <4). Only libraries the code actually imports are listed.
+
+# --- core pipeline: cleaning, features, models, evaluation, charts ---
+pandas~=3.0          # pandas 3 needs Python 3.11 or newer
+numpy>=2.4,<2.5
+scikit-learn==1.8.0
+scipy~=1.17          # chi-square / Cramer's V in the EDA, Spearman rank agreement in the interpretation
+joblib~=1.5          # saving and loading models/churn_model.pkl
+matplotlib~=3.10
+seaborn~=0.13
+
+# --- explanations: exact tree SHAP values (src/interpretation.py, src/predict.py) ---
+shap~=0.53
+
+# --- tests ---
+pytest~=9.1
+packaging>=24
+
+# --- running the notebook (jupyter nbconvert --execute); not imported by the code ---
+ipykernel~=7.4
+nbconvert~=7.17
